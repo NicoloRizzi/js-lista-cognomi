@@ -1,9 +1,32 @@
-// GENERO UN VETTORE CON ELEMENTI GIA' ESISTENTI
+// VARIABILI
+var vectorSurname = [
+    'Bianchi',
+    'Rossi',
+    'Duzioni',
+    'Balsano',
+    'Verdi'];
+var surname = '';
 
-var vectorSurname = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'];
+// GENERO UNA VARIABILE PER PUNTARE AL BOTTONE
 
-// RICEVO IN INPUT IL VALORE ACQUISITO
+var btnAggiungi = document.getElementById('aggiungi');
 
-var cognome = document.getElementById('cognome').value;
-console.log(cognome);
+
+// ASSEGNO ALLA VARIABILE DI GESTIRE L'EVENTO DEL CLICK
+
+btnAggiungi.addEventListener('click',
+function() {
+    // ACQUISISCO IL VALORE CONTENUTO NELLA INPUT
+    surname = document.getElementById('cognome').value;
+    console.log('Acquisizione del valore nel campo input: ' + surname);
+
+    // AGGIUNGO L'ELEMENTO AL VETTORE
+
+    vectorSurname.push(surname);
+    console.log(vectorSurname);
+
+    
+
+}
+)
 
