@@ -35,15 +35,25 @@ function() {
     // CREO VARIABILE DI APPOGGIO PER MEMORIZZARE OGNI SIGNOLO VALORE CONTENUTO NELL'ARRAY
 
     var daStampare = '';
-
+    // RICERCA DELLA POSIZIONE DELL'ULTIMO VALORE DI SURNAME INSERITO ALL'INTERNO DEL VETTORE
+    var posizione = vectorSurname.indexOf(surname);
     // CREO UN CICLO PER LEGGERE FINO ALL'ULTIMO ELEMENTO DELL'ARRAY E MEMORIZZARLO ALL'INTERNO DELLA VARIABILE
 
     for (var i = 0; i < vectorSurname.length; i++) {
         daStampare += "<li>" + vectorSurname[i] + "</li>";
         console.log(daStampare);
     }
+
+    //PRINT DEGLI ELEMENTI DEL VETTORE ORDINATO
+
     elencoCognomiOrdinati.innerHTML = daStampare;
+   
+
+    // PULIZIA DEL CAMPO INPUT
     surname = document.getElementById('cognome').value = '';
+
+    
+    
 }
 );
 
